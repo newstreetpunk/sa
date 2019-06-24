@@ -12,6 +12,8 @@ html
 	font-size: 100%
 ul, li
 	list-style: none
+	padding: 0
+	margin: 0
 
 body
 	font-size: 16px
@@ -21,6 +23,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	height: 2000px
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -41,6 +44,17 @@ body
 
 b, strong
 	font-weight: bold
+
+a
+	color: $text
+	transition: all .25s ease
+	&:hover
+		text-decoration: none
+		color: $text
+.accent-c
+	color: $accent
+
+@import "sections/header"
 
 
 
