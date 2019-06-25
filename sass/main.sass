@@ -66,9 +66,22 @@ a
 	text-decoration: none
 	display: inline-block
 	z-index: 4
+	position: relative
 	&:hover
-		color: #fff
+		color: $accent
 		background-image: linear-gradient(to right, rgb( 240, 161, 68 ) 20%, rgb( 224, 82, 71 ) 100%)
+	&:before
+		content: ''
+		display: block
+		width: 99%
+		height: 97%
+		background-color: #fff
+		position: absolute
+		border-radius: 50px
+		left: .5%
+		top: 1.5%
+		z-index: -1
+		opacity: 0
 
 .bsh-btn
 	box-shadow: 16.853px 14.141px 0px 0px rgb( 241, 241, 241 )
