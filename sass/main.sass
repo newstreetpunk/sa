@@ -47,12 +47,35 @@ b, strong
 
 a
 	color: $text
-	transition: all .25s ease
+	transition: all .2s ease
 	&:hover
 		text-decoration: none
 		color: $text
 .accent-c
 	color: $accent
+
+.sa-btn
+	background-image: linear-gradient(to right, rgb( 240, 161, 68 ) 0%, rgb( 224, 82, 71 ) 100%)
+	padding: 22px 70px
+	font-weight: 500
+	color: #fff
+	letter-spacing: 1px
+	border-radius: 50px
+	cursor: pointer
+	text-decoration: none
+	display: inline-block
+	z-index: 4
+	&:hover
+		color: #fff
+
+.bsh-btn
+	box-shadow: 16.853px 14.141px 0px 0px rgb( 241, 241, 241 )
+	&:hover
+		box-shadow: 12px 10px 0px 0px rgb( 241, 241, 241 )
+	&:focus,
+	&:active
+		box-shadow: 3px 3px 0px 0px rgb( 241, 241, 241 )
+
 
 @import "sections/header"
 @import "sections/main"

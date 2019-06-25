@@ -1,6 +1,7 @@
 $(function() {
 
-	setTimeout("$('.main-bg-1').show();", 1000);
+	setTimeout("$('.main-bg-1').show();", 1350);
+  setTimeout("$('.main-content-block').css('left', '0');", 1350);
 	setTimeout("$('.main-bg-2').addClass('vis');", 1300);
 	setTimeout("$('.main-bg-3').addClass('vis');", 1400);
 
