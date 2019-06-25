@@ -11,27 +11,21 @@
 			top: -45vw
 			right: -20vw
 			z-index: 1
-			display: none
 		&-2
 			position: absolute
 			width: 65%
 			height: 100vh
-			top: -100%
+			top: 5vw
 			right: -16vw
 			z-index: 2
 			transition: all .2s ease
-			&.vis
-				top: 5vw
 		&-3
 			position: absolute
 			width: 55%
 			height: 100vh
-			top: -100%
+			top: 95px
 			right: 4vw
 			z-index: 3
-			transition: all .25s ease
-			&.vis
-				top: 95px
 	&-content
 		display: flex
 		padding-top: 16%
@@ -39,11 +33,12 @@
 		&-block
 			position: relative
 			z-index: 1
-			left: -100%
-			transition: all .15s
 			.sa-btn
 				margin-left: 40px
 				margin-top: 60px
+				transition: all .7s ease-in-out
+				position: relative
+				left: -100%
 	&-title
 		font-size: 48px
 		line-height: 1.1
