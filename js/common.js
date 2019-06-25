@@ -1,6 +1,6 @@
 $(function() {
 
-  setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 2000);
+  setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
 
 	//удаление атрибута 'style'
 	$(window).scroll(function(){
