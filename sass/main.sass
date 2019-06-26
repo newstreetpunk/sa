@@ -55,6 +55,27 @@ a
 .accent-c
 	color: $accent
 
+.bd-line-gr
+	background-image: linear-gradient(to right, rgb( 240, 161, 68 ) 0%, rgb( 224, 82, 71 ) 100%)
+	padding: 8px 15px
+	z-index: 1
+	position: relative
+	border-radius: 50px
+	display: inline-block
+	text-transform: none
+	&:before
+		content: ''
+		display: block
+		background-color: #fff
+		position: absolute
+		border-radius: inherit
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		margin: 2px
+		z-index: -1
+
 .sa-btn
 	background-image: linear-gradient(to right, rgb( 240, 161, 68 ) 0%, rgb( 224, 82, 71 ) 100%)
 	padding: 22px 70px
@@ -75,13 +96,14 @@ a
 	&:before
 		content: ''
 		display: block
-		width: calc(100% - 4px)
-		height: calc(100% - 4px)
 		background-color: #fff
 		position: absolute
-		border-radius: 48px
-		left: 2px
-		top: 2px
+		border-radius: inherit
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		margin: 2px
 		z-index: -1
 		opacity: 0
 		transition: all .2s ease
