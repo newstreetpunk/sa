@@ -1,26 +1,15 @@
-.header
-	background-color: transparent
-	position: fixed
-	width: 100%
-	top: 0
-	left: 0
-	transition: all .2s ease
-	z-index: 999
-	.custom-logo-link
-		img
-			width: 225px
-			height: auto
-	&-wrap
+.info-line
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	height: 95px
+
+.sa-menu
+	ul
 		display: flex
-		justify-content: space-between
-		align-items: center
-		flex-wrap: wrap
-		height: 95px
-	&-menu
-		ul
-			display: flex
-			li
-				height: 95px
+		li
+			height: 95px
 			a
 				font-weight: bold
 				font-size: 0.9375rem
@@ -43,6 +32,19 @@
 				&:hover 
 					&:before
 						width: 100%
+
+.header
+	background-color: transparent
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	transition: all .2s ease
+	z-index: 999
+	.custom-logo-link
+		img
+			width: 225px
+			height: auto
 .phone
 	font-weight: bold
 	font-size: 0.9375rem
