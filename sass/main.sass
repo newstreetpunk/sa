@@ -29,7 +29,6 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
-	height: 2000px
 
 img
 	display: block
@@ -166,12 +165,25 @@ section
 		text-transform: uppercase
 		margin-bottom: 2.6vmax
 		font-weight: bold
+		position: relative
+		padding-left: 56px
+		&:before
+			content: ''
+			display: block
+			width: 40px
+			height: 3px
+			background-image: linear-gradient(to left, rgb( 240, 161, 68 ) 0%, rgb( 224, 82, 71 ) 100%)
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
 
 
 
 @import "sections/header"
 @import "sections/main"
 @import "sections/callback"
+@import "sections/get-clients"
 
 
 
