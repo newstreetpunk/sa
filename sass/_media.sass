@@ -1,13 +1,26 @@
 //@import "vars"
 
+@media all and (max-width: 1690px) 
+	.container
+		max-width: 1280px
+
 
 @media all and (max-width: 1280px)
 	.container
 		max-width: 1140px
 	html
 		font-size: 90%
+	.callback
+		padding-bottom: 125px
+	form .row .form-group label
+		font-size: .9rem
+		padding-left: 15px
+	.main
+		margin-bottom: 90px
 
 @media all and (max-width: 992px)
+	.main
+		margin-bottom: 8vw
 	html
 		font-size: 80%
 	.container
@@ -27,7 +40,13 @@
 	.main-bg-1
 		top: -42vw
 		right: -18vw
+
+
 @media all and (max-width: 768px)
+	section h2
+		line-height: 1.2
+	form .row .form-group
+		width: 48%
 	html
 		font-size: 70%
 	.main-bg-2
@@ -70,6 +89,13 @@
 		font-size: 1.2rem
 
 @media all and (max-width: 580px)
+	.callback h2
+		margin-top: 2vw
+	form .row .form-group
+		width: 100%
+		margin-bottom: 20px
+	form .row
+		margin-bottom: 20px
 	html
 		font-size: 65%
 	.custom-logo-link
@@ -79,7 +105,7 @@
 		padding-left: 0
 		font-size: 15px
 	.main-content
-		padding-top: 75vw
+		padding-top: 50vw
 	.main-bg-2
 		width: 100%
 		right: -25vw

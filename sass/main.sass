@@ -3,7 +3,7 @@
 @import "fonts"
 
 ::placeholder
-	color: #666
+	color: #bbb
 
 ::selection
 	background-color: $accent
@@ -16,7 +16,7 @@ ul, li
 	margin: 0
 
 .container
-	max-width: 1280px
+	max-width: 1440px
 	width: 100%
 	margin: 0 auto
 	padding: 0 20px
@@ -30,13 +30,6 @@ body
 	overflow-x: hidden
 	color: $text
 	height: 2000px
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
 
 img
 	display: block
@@ -45,6 +38,7 @@ img
 	height: auto
 	width: 100%
 	object-fit: cover
+	user-select: none
 
 .text-center
 	text-align: center
@@ -69,6 +63,8 @@ a
 	border-radius: 50px
 	display: inline-block
 	text-transform: none
+	font-weight: 500
+	font-size: 1.063rem
 	&:before
 		content: ''
 		display: block
@@ -82,7 +78,7 @@ a
 		margin: 2px
 		z-index: -1
 
-.sa-btn
+.sa-btn, input[type="submit"]
 	background-image: linear-gradient(to right, rgb( 240, 161, 68 ) 0%, rgb( 224, 82, 71 ) 100%)
 	padding: 22px 70px
 	font-weight: 500
@@ -162,11 +158,20 @@ a
 			&:after
 				transform: rotate(-45deg)
 				bottom: 0
+section
+	padding-top: 100px
+	h2
+		font-size: 1.875rem
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 2.6vmax
+		font-weight: bold
 
 
 
 @import "sections/header"
 @import "sections/main"
+@import "sections/callback"
 
 
 
