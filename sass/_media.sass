@@ -5,9 +5,22 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	html
+		font-size: 90%
 
 // ≥992px
 +media-breakpoint-down(md)
+	html
+		font-size: 80%
+	.header .custom-logo-link img
+		width: 190px
+	.header-menu
+		display: none
+	.main-content-block
+		z-index: 3
+	.main-title,
+	.main-descr
+		text-shadow: 1px 1px 5px rgba(#fff,1), -1px -1px 5px rgba(#fff,1)
 
 // ≥768px
 +media-breakpoint-down(sm)
