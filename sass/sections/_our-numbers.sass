@@ -1,29 +1,38 @@
 .our-numbers
 	background-size: cover
 	background-position: center
-	min-height: 300px
+	padding-top: 85px
+	padding-bottom: 75px
 	&-block
+		display: flex
+		justify-content: space-between
 	&-item
 		position: relative
 		width: 24%
 		text-align: center
+		z-index: 1
+		p
+			max-width: 90%
+			margin-left: 5%
 		.number
 			font-size: 4.063rem
 			font-weight: bold
 			background-image: linear-gradient(to bottom, #efa144 0%, #e05247 100%)
 			position: relative
-			z-index: 2
 			span
 				font-size: 2.25rem
 			&:before
 				content: ''
-				display: block
+				display: inline-block
 				width: 90px
 				height: 90px
 				background-color: #f3f3f3
 				border-radius: 10rem
 				position: absolute
 				top: 50%
-				left: 10px
-				transform: translateY(-50%)
+				left: 60%
+				transform: translate(-50%, -50%)
 				z-index: -1
+.our-numbers-item:first-child .number::before,
+.our-numbers-item:last-child .number::before
+	left: 48%
