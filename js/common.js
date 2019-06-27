@@ -1,6 +1,6 @@
 $(function() {
 
-  //setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
+  setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
 
   $('.menu-btn').click(function(){
 	$(this).toggleClass('active');
