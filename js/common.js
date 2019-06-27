@@ -82,6 +82,53 @@ $(function() {
 	});
 
 });
+  //ТАЙМЕР
+    $(document).ready(function() {
+        var eDate = jQuery('.eDate').text();
+        var d = eDate;
+        $(".eTimer").eTimer({
+            etType: 1,
+            etDate: d,
+            etTitleText: "До конца акции осталось:",
+            etTitleSize: 27,
+            etShowSign: 1,
+            etSep: ":",
+            etFontFamily: "inherit",
+            etTextColor: "#000",
+            etPaddingTB: 3.5,
+            etPaddingLR: 7,
+            etBackground: "transparent",
+            etBorderSize: 0,
+            etBorderRadius: 0,
+            etBorderColor: "white",
+            etShadow: " 0px 0px 0px 0px #333333",
+            etLastUnit: 4,
+            etNumberFontFamily: "inherit",
+            etNumberSize: 30,
+            etNumberColor: "#e05247",
+            etNumberPaddingTB: 0,
+            etNumberPaddingLR: 0,
+            etNumberBackground: "transparent",
+            etNumberBorderSize: 0,
+            etNumberBorderRadius: 0,
+            etNumberBorderColor: "white",
+            etNumberShadow: "inset 0px 0px 0px 0px rgba(0, 0, 0, 0.5)"
+        });
+
+        jQuery(function() {
+            var eNd = jQuery('.etDays');
+            var eN1 = jQuery('.etDays .etNumber:nth-child(1)').text();
+            var eN2 = jQuery('.etDays .etNumber:nth-child(2)').text();
+
+            eNd.hide().next().hide();
+            $('.etSign').hide();
+
+            if (eN2 > 0 || eN1 > 0) {
+                eNd.show().next().show();
+            }
+
+        });
+    });
 
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;

@@ -388,6 +388,38 @@
 		</section>
 		<!-- /.reviews -->
 
+		<section class="callback-timer">
+			<div class="container">
+				<div class="sa-timer">
+					<h3>Получите план продвижения<br>вашего бизнеса абсолютно<br>
+						<span class="accent-c">бесплатно</span> до <span id="myDate"class="accent-c"></span> числа!
+					</h3>
+					<span class="eDate" style="display:none;">29.05.2019.0.0</span>    
+					<div class="eTimer"></div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+
+				function echo_date(date) {
+					var months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+					echo_date = function(date) {
+						date = new Date(date);
+						return {
+							"date": date,
+							"month": months[date.getMonth()],
+							"day_num": date.getDate()
+						};
+					}
+					return echo_date(date);
+				};
+				var myDate = echo_date(Date.now() + 24 * 60 * 60 * 1000);
+				document.getElementById('myDate').innerHTML = myDate.day_num /*+ " " + myDate.month*/;
+
+			</script>
+		</section>
+		<!-- /.callback-timer -->
+
 	</main>
 	
 	<br>
