@@ -388,17 +388,53 @@
 		</section>
 		<!-- /.reviews -->
 
-		<section class="callback-timer">
+		<section class="callback-timer" style="background-image: url(img/svg/timer-bg.svg);">
 			<div class="container">
-				<div class="sa-timer">
+				<div class="callback-timer-wrap">
+					<div class="sa-timer">
 					<h3>Получите план продвижения<br>вашего бизнеса абсолютно<br>
 						<span class="accent-c">бесплатно</span> до <span id="myDate"class="accent-c"></span> числа!
 					</h3>
 					<span class="eDate" style="display:none;">29.05.2019.0.0</span>    
 					<div class="eTimer"></div>
 				</div>
+				<!-- /.sa-timer -->
+				<div class="callback-timer-form">
+					<form>
+						<div class="row">
+							<div class="form-group">
+								<label for="">Ваше имя:</label>
+								<input type="text" placeholder="Имя">
+							</div>
+							<div class="form-group">
+								<label for="">Ваше телефон:</label>
+								<input type="tel" placeholder="+7 (___) ___-__-__">
+							</div>
+						</div>
+						<!-- /.row -->
+						<div class="row">
+							<div class="form-group">
+								<label for="">Удобное время для звонка:</label>
+								<input type="text" placeholder="">
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Воспользоваться акцией">
+							</div>
+						</div>
+						<!-- /.row -->
+						<span>
+							<input type="checkbox" class="checkbox" id="checkbox3" checked/>
+							<label for="checkbox3"></label>Я согласен(а) с обработкой персональных данных и <a href="#">политикой конфиденциальности</a></span>
+							<span><input type="checkbox" class="checkbox" id="checkbox4" checked/>
+							<label for="checkbox4"></label>Подписаться на новости об акциях и скидках
+						</span>
+						</form>
+					</div>
+					<!-- /.callback-timer-form -->
+				</div>
+				<!-- /.callback-timer-wrap -->
 			</div>
-
+			<!-- /.container -->
 			<script type="text/javascript">
 
 				function echo_date(date) {
