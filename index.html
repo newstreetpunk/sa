@@ -76,17 +76,11 @@
 					<div class="main-content-block">
 						<!-- <span class="bd-line-gr">Мы - креативное агенство, а не конвейер</span> -->
 						<div class="main-title-wrap">
-							<span class="main-title">Создание и <br><span
-     class="txt-rotate"
-     data-period="1000"
-     data-rotate='[ "продвижение"]'></span></span>
+							<span class="main-title">Создание и продвижение</span>
 							<span class="accent-c rotate">Сайтов</span>
 						</div>
 						<div class="main-title-wrap">
-							<span class="main-title">В интернете и <br><span
-     class="txt-rotate"
-     data-period="2000"
-     data-rotate='[ "соцсетях"]'></span></span>
+							<span class="main-title">В интернете и соцсетях</span>
 							<span class="accent-c small-span rotate">Реклама</span>
 						</div>
 						<div class="main-descr">
@@ -393,7 +387,10 @@
 				<div class="callback-timer-wrap">
 					<div class="sa-timer">
 					<h3>Получите план продвижения <br>вашего бизнеса абсолютно <br>
-						<span class="accent-c">бесплатно</span> до <span id="myDate"class="accent-c"></span> числа!
+						<span class="accent-c">бесплатно</span> до 
+						<span id="myDate"class="accent-c"></span>
+						<span id="myMonth"></span>!
+							
 					</h3>
 					<span class="eDate" style="display:none;">29.05.2019.0.0</span>    
 					<div class="eTimer"></div>
@@ -450,13 +447,43 @@
 					return echo_date(date);
 				};
 				var myDate = echo_date(Date.now() + 24 * 60 * 60 * 1000);
-				document.getElementById('myDate').innerHTML = myDate.day_num /*+ " " + myDate.month*/;
+				document.getElementById('myDate').innerHTML = myDate.day_num;
+				document.getElementById('myMonth').innerHTML = myDate.month;
 
 			</script>
 		</section>
 		<!-- /.callback-timer -->
 
 		<span class="our-slogan">Приведем клиентов или вернем деньги!</span>
+
+		<section class="our-clients">
+			<div class="container">
+				<h2>Нам доверяют</h2>
+				<div class="our-clients-block">
+					<img src="img/other_logos/17.png" alt="ALT">
+					<img src="img/other_logos/1.png" alt="ALT">
+					<img src="img/other_logos/2.png" alt="ALT">
+					<img src="img/other_logos/3.png" alt="ALT">
+					<img src="img/other_logos/4.png" alt="ALT">
+					<img src="img/other_logos/5.png" alt="ALT">
+					<img src="img/other_logos/6.png" alt="ALT">
+					<img src="img/other_logos/7.png" alt="ALT">
+					<img src="img/other_logos/8.png" alt="ALT">
+					<img src="img/other_logos/9.png" alt="ALT">
+					<img src="img/other_logos/10.png" alt="ALT">
+					<img src="img/other_logos/11.png" alt="ALT">
+					<img src="img/other_logos/12.png" alt="ALT">
+					<img src="img/other_logos/13.png" alt="ALT">
+					<img src="img/other_logos/14.png" alt="ALT">
+					<img src="img/other_logos/15.png" alt="ALT">
+					<img src="img/other_logos/16.png" alt="ALT">
+					<img src="img/other_logos/18.png" alt="ALT">
+				</div>
+				<!-- /.our-clients-block -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.our-clients -->
 
 	</main>
 	
