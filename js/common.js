@@ -1,6 +1,7 @@
 $(function() {
 
-  $('.stocks-item .stocks-item--img').equalHeights();
+  $('.stocks-item--img').equalHeights();
+  //$('.promote-item').equalHeights();
 
   setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
 
