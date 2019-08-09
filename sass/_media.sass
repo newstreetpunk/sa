@@ -68,9 +68,11 @@
 		width: 150px
 	.stocks-block
 		justify-content: space-between
-	// .stocks-item
-	// 	max-width: 100%
-	// 	width: 40%
+	.promote-block
+		width: 100%
+	.promote-item--text
+		width: 35%
+
 
 @media all and (max-width: 992px)
 	.main
@@ -245,6 +247,10 @@
 		width: 100px
 	.stocks-item--info h3
 		font-size: 1.2rem
+	.promote-item span
+		width: 50px
+		height: 50px
+		line-height: 50px
 
 
 @media all and (max-width: 580px)
@@ -394,4 +400,21 @@
 		max-width: 100%
 		&:first-child
 			margin-bottom: 30px
+	.promote-item
+		min-height: 80px
+	.promote-item:nth-child(2n+2)
+		flex-direction: row
+	.promote-item:nth-child(2n+2) .promote-item--text
+		text-align: left
+		margin-right: 0
+	.promote-item--text
+		width: 100%
+		margin-left: 0
+		padding-left: 30px
+	.promote-item--img
+		display: none
+	.promote-item span
+		left: -8px
+	.promote-item:after
+		left: -5px
 
