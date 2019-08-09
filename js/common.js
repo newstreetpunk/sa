@@ -1,5 +1,7 @@
 $(function() {
 
+  $('.stocks-item--img').equalHeights();
+
   setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
 
   $('.menu-btn').click(function(){

@@ -200,6 +200,31 @@ section
 	border-radius: 50px
 	max-width: 650px
 
+.sub-title
+	font-size: 1.25rem
+	padding-left: 56px
+	font-weight: 500
+	display: block
+.read-more
+	text-transform: uppercase
+	font-weight: 500
+	position: relative
+	padding-right: 22px
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		background-image: url(../img/icons/right-arrow.svg)
+		width: 16px
+		height: 12px
+		background-size: contain
+		background-repeat: no-repeat
+	&:hover
+		text-decoration: underline
+		color: $accent
 
 
 @import "sections/header"
@@ -213,6 +238,9 @@ section
 @import "sections/our-clients"
 @import "sections/our-ratings"
 @import "sections/our-partners"
+@import "sections/plan-calculation"
+@import "sections/stocks"
+
 
 
 
