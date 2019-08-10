@@ -1,13 +1,17 @@
 $(function() {
   
-  $('.stocks-item--img').equalHeights();
-  $('.promote-item').equalHeights();
-
   setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
 
   $('.menu-btn').click(function(){
    $(this).toggleClass('active');
+   $('.sa-menu--mobile').slideToggle(100);
  });
+
+  $('.sa-menu--mobile nav>ul>li a:contains("Услуги")').parent().append('<button></button>');
+  $('.sa-menu--mobile nav>ul>li button').on('click', function() {
+    $(this).toggleClass('active');
+    $('.sa-menu--mobile nav>ul>li>ul').slideToggle(100);
+  });
 
   if ($(window).width() > 768) {
 
@@ -88,6 +92,9 @@ $('.promote-item').append('<span>');
 $('.promote-item').each(function(i) {
   $(this).children('span').text(+ i + + 1);
 });
+
+$('.stocks-item--img').equalHeights();
+$('.promote-item').equalHeights();
 
 });
   //ТАЙМЕР

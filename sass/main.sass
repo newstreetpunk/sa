@@ -138,6 +138,7 @@ a
 	justify-content: center
 	align-items: center
 	cursor: pointer
+	z-index: 2
 	span
 		height: 3px
 		width: 35px
@@ -159,6 +160,7 @@ a
 			bottom: -6px
 			transition: all .2s ease
 	&.active
+		display: flex
 		span
 			background-color: transparent
 			&:before
@@ -167,6 +169,8 @@ a
 			&:after
 				transform: rotate(-45deg)
 				bottom: 0
+li>ol, li>ul
+	margin-left: 0
 section
 	padding-top: 50px
 	h2
