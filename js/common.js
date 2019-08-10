@@ -1,5 +1,42 @@
 $(function() {
-  
+
+  //СЧЕТЧИК
+  $('.our-numbers-block').each(function() {
+    $('.number-cell').each(function() {
+
+      var target_block = $(this);
+      var thN = target_block.text();
+      var blockStatus = true;
+
+        $(window).scroll(function() {
+
+          var scrollEvent = ($(window).scrollTop() > (target_block.offset().top - $(window).height()));
+
+          if(scrollEvent && blockStatus) {
+
+        blockStatus = false;
+        
+        $({numberValue: 0}).animate({numberValue:thN}, {
+
+          duration: 800,
+          easing: "linear",
+          
+          step: function(val) {
+
+            target_block.html('>' + Math.ceil(val));
+            
+          }
+          
+        });
+        
+      }
+      
+    });
+      });
+  });
+ 
+
+
   setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
 
   $('.menu-btn').click(function(){
