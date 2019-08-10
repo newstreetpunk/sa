@@ -210,18 +210,10 @@ section
 	font-weight: 500
 	position: relative
 	padding-right: 22px
-	&:before
-		content: ''
-		display: block
-		position: absolute
-		right: 0
-		top: 50%
-		transform: translateY(-50%)
-		background-image: url(../img/icons/right-arrow.svg)
+	svg
 		width: 16px
 		height: 12px
-		background-size: contain
-		background-repeat: no-repeat
+		fill: $accent
 	&:hover
 		text-decoration: underline
 		color: $accent
@@ -241,6 +233,8 @@ section
 @import "sections/plan-calculation"
 @import "sections/stocks"
 @import "sections/promote"
+@import "sections/articles"
+@import "sections/discount"
 
 
 
