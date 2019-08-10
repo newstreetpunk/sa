@@ -3,6 +3,7 @@ $(function() {
   setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
 
   $('.menu-btn').click(function(){
+   $('.custom-logo-link').toggleClass('active');
    $(this).toggleClass('active');
    $('.sa-menu--mobile').slideToggle(100);
  });
