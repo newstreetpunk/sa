@@ -22,13 +22,19 @@
 		.slick-list
 			overflow: visible
 			overflow-x: hidden
+			overflow-y: visible
+			min-height: 800px
+		.slick-next,
+		.slick-prev
+			top: 41%
+			transform: translateY(-50%)
 		.slick-next
 			right: 24%
-			top: 49.3%
-			transform: translateY(-36%) rotate(180deg)
+			//top: 49.3%
+			transform: translateY(-50%) rotate(180deg)
 		.slick-prev
 			left: 24%
-			top: 51%
+			//top: 51%
 	&-slide
 		transform: scale(.5)
 		transition: all .2s ease
