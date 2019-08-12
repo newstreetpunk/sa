@@ -1,0 +1,31 @@
+.sa-faq
+	.tabs
+		position: relative
+		&__caption
+			&-item
+				display: flex
+				span
+					max-width: 35%
+					min-width: 35%
+					padding-right: 100px
+					padding-top: 25px
+					padding-bottom: 25px
+					background-image: none
+					transition: all .3s ease
+					font-size: 1.25rem
+					line-height: 1.4
+					font-weight: 500
+					cursor: pointer
+					z-index: 2
+					&.active
+						background-image: linear-gradient(to right, rgba(#efa144, .2) 0%, rgba(#e05247, .2) 100%)
+						border-right: 1px solid $accent
+				p
+					display: none
+					position: absolute
+					top: 50%
+					left: 40%
+					transform: translateY(-50%)
+					margin-bottom: 0
+					&.active
+						display: block

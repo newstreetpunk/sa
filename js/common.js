@@ -148,6 +148,65 @@ $('.steps-item').each(function(i) {
 });
 
 
+//   function wimWid() {
+//     var winWidth = ($(window).width()),
+//     conWidth = ($('.container').width()),
+//     padLeft = (winWidth - conWidth) / 2
+
+//     $('.tabs__caption li').css('padding-left', padLeft);
+//     $('.tabs__content').css('padding-right', padLeft);
+//   }wimWid();
+
+//   $(window).on('resize', function(){wimWid();});
+
+//   $('.tabs .tabs__content:nth-child(2)').addClass('active');
+//   $('ul.tabs__caption li:first-child').addClass('active');
+
+//   $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+//     $(this).addClass('active').siblings().removeClass('active')
+//     .closest('div.tabs').find('div.tabs__content').fadeOut(0).eq($(this).index()).fadeIn(500);
+//   });
+// }else{
+//   $('.tabs .tabs__content:nth-child(2)').addClass('active');
+//   $('ul.tabs__caption li:first-child').addClass('active');
+
+//   $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+//     $(this).addClass('active').siblings().removeClass('active')
+//     .closest('div.tabs').find('div.tabs__content').slideUp(0).eq($(this).index()).slideDown(500);
+//   });
+
+$('.tabs__caption-item:first-child span, .tabs__caption-item:first-child p').addClass('active');
+
+if($(window).width() > 580){
+  function wimWid() {
+   var winWidth = ($(window).width()),
+   conWidth = ($('.container').width()),
+   padLeft = (winWidth - conWidth) / 2,
+   widItem = ($('.tabs__caption-item span').width());
+
+   $('.tabs__caption-item span').css('padding-left', padLeft);
+   $('.tabs__caption-item p').css({
+    'padding-right': padLeft
+    //'left': widItem + 200
+  });
+ }wimWid();
+
+ $(window).on('resize', function(){wimWid();});
+
+ $('.tabs__caption-item span').on('click', function(){
+    $('.tabs__caption-item span').removeClass('active');
+    $('.tabs__caption-item p').fadeOut(0);
+    $(this).addClass('active').next().fadeIn(500);
+ });
+}else{
+  $('.tabs__caption-item span').on('click', function(){
+    $('.tabs__caption-item span').removeClass('active');
+    $('.tabs__caption-item p').slideUp(300);
+    $(this).addClass('active').next().slideDown(300);
+ });
+}
+
+
 });
   //ТАЙМЕР
   $(document).ready(function() {
