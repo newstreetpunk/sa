@@ -1,56 +1,5 @@
 $(function() {
 
-  //СЧЕТЧИК
-  $('.our-numbers-block').each(function() {
-    $('.number-cell').each(function() {
-
-      var target_block = $(this);
-      var thN = target_block.text();
-      var blockStatus = true;
-
-        $(window).scroll(function() {
-
-          var scrollEvent = ($(window).scrollTop() > (target_block.offset().top - $(window).height()));
-
-          if(scrollEvent && blockStatus) {
-
-        blockStatus = false;
-        
-        $({numberValue: 0}).animate({numberValue:thN}, {
-
-          duration: 800,
-          easing: "linear",
-          
-          step: function(val) {
-
-            target_block.html('>' + Math.ceil(val));
-            
-          }
-          
-        });
-        
-      }
-      
-    });
-      });
-  });
- 
-
-
-  setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
-
-  $('.menu-btn').click(function(){
-   $('.custom-logo-link').toggleClass('active');
-   $(this).toggleClass('active');
-   $('.sa-menu--mobile').slideToggle(100);
- });
-
-  $('.sa-menu--mobile nav>ul>li a:contains("Услуги")').parent().append('<button></button>');
-  $('.sa-menu--mobile nav>ul>li button').on('click', function() {
-    $(this).toggleClass('active');
-    $('.sa-menu--mobile nav>ul>li>ul').slideToggle(100);
-  });
-
   if ($(window).width() > 768) {
 
    var prevScrollpos = window.pageYOffset;
@@ -76,12 +25,59 @@ $(function() {
   });
 
 }
+$(document).ready(function() {
+  $('.stocks-item--img').equalHeights();
+  $('.steps-item').equalHeights();
+});
+
+  //СЧЕТЧИК
+  $('.our-numbers-block').each(function() {
+    $('.number-cell').each(function() {
+
+      var target_block = $(this);
+      var thN = target_block.text();
+      var blockStatus = true;
+
+        $(window).scroll(function() {
+
+        var scrollEvent = ($(window).scrollTop() > (target_block.offset().top - $(window).height()));
+
+        if(scrollEvent && blockStatus) {
+        blockStatus = false;
+        $({numberValue: 0}).animate({numberValue:thN}, {
+          duration: 800,
+          easing: "linear", 
+          step: function(val) {
+            target_block.html('>' + Math.ceil(val));  
+          } 
+        });  
+      }  
+    });
+    });
+  });
+ 
+
+
+  setTimeout("$('.main-content-block .sa-btn').css('left', '0');", 100);
+
+  $('.menu-btn').click(function(){
+   $('.custom-logo-link').toggleClass('active');
+   $(this).toggleClass('active');
+   $('.sa-menu--mobile').slideToggle(100);
+ });
+
+  $('.sa-menu--mobile nav>ul>li a:contains("Услуги")').parent().append('<button></button>');
+  $('.sa-menu--mobile nav>ul>li button').on('click', function() {
+    $(this).toggleClass('active');
+    $('.sa-menu--mobile nav>ul>li>ul').slideToggle(100);
+  });
+
 $('.reviews-slider').slick({
  infinite: true,
  slidesToShow: 2,
  slidesToScroll: 1,
- prevArrow: '<button class="slick-prev"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">	<path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225 c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></svg></button>',
- nextArrow: '<button class="slick-next"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">	<path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225 c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></svg></button>',
+ prevArrow: '<button class="slick-prev"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 477.175 477.175" xml:space="preserve">	<path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225 c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></svg></button>',
+ nextArrow: '<button class="slick-next"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 477.175 477.175" xml:space="preserve">	<path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225 c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></svg></button>',
  responsive: [
  {
   breakpoint: 992,
@@ -126,13 +122,11 @@ srcAction: 'iframe_src',
 }
 });
 
-$('.promote-item').append('<span>');
-$('.promote-item').each(function(i) {
+$('.steps-item').append('<span>');
+$('.steps-item').each(function(i) {
   $(this).children('span').text(+ i + + 1);
 });
 
-$('.stocks-item--img').equalHeights();
-$('.promote-item').equalHeights();
 
 });
   //ТАЙМЕР
