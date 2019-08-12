@@ -160,7 +160,6 @@ if($(window).width() > 580){
    $('.tabs__caption-item span').css('padding-left', padLeft);
    $('.tabs__caption-item p').css({
     'padding-right': padLeft
-    //'left': widItem + 200
   });
  }wimWid();
 
