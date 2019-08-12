@@ -202,7 +202,11 @@ if($(window).width() > 580){
   $('.tabs__caption-item span').on('click', function(){
     $('.tabs__caption-item span').removeClass('active');
     $('.tabs__caption-item p').slideUp(300);
-    $(this).addClass('active').next().slideDown(300);
+    if($(this).next().is(':visible')){
+      $(this).addClass('active').next().slideUp(300);
+    }else{
+      $(this).addClass('active').next().slideDown(300);
+    }
  });
 }
 
