@@ -1,0 +1,31 @@
+.prices
+	&__item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-direction: row
+		&:nth-child(odd)
+			flex-direction: row-reverse
+			margin-top: 50px
+		&--img
+			max-width: 425px
+			width: 100%
+		&--text
+			width: 60%
+			h4
+				font-size: 1.125rem
+				margin-bottom: 1.7rem
+		ul
+			li
+				margin-bottom: 30px
+				position: relative
+				padding-left: 80px
+				svg
+					width: 55px
+					height: auto
+					margin-right: 25px
+					fill: url(#linear-gradient)
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
