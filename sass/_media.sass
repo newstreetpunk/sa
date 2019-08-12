@@ -32,7 +32,7 @@
 	form .row .form-group label
 		font-size: .9rem
 		padding-left: 15px
-	.main
+	.intro
 		margin-bottom: 90px
 	.get-clients-block--item
 		max-width: 48%
@@ -68,19 +68,27 @@
 		width: 150px
 	.stocks-block
 		justify-content: space-between
-	.promote-block
+	.steps-block
 		width: 100%
-	.promote-item--text
+	.steps-item--text
 		width: 35%
 	.articles-block
 		justify-content: space-between
 	.articles-item
 		width: 23%
 		padding: 25px 15px
+	.certificates-slide.slick-slide.slick-current.slick-active
+		left: -3vw
+	.certificates-slide.slick-slide.slick-current.slick-active + .slick-active + .slick-active
+		right: -3vw
+	.certificates-slider:after
+		left: -70px
+	.certificates-slider:before
+		right: -70px
 
 
 @media all and (max-width: 992px)
-	.main
+	.intro
 		margin-bottom: -60px
 	html
 		font-size: 80%
@@ -94,11 +102,11 @@
 		height: 100%
 		display: flex
 		align-items: center
-	.main-title-wrap .rotate
+	.intro-title-wrap .rotate
 		left: -20px
-	.main-content-block .sa-btn
+	.intro-content-block .sa-btn
 		margin-top: 35px
-	.main-bg-1
+	.intro-bg-1
 		top: -42vw
 		right: -18vw
 	.our-cases-reclame .our-cases-item:nth-child(even) .our-cases-item--text
@@ -164,6 +172,10 @@
 		letter-spacing: 0
 	.footer .sa-menu ul li a
 		padding: 0 10px
+	.certificates-slider:after
+		left: -20px
+	.certificates-slider:before
+		right: -20px
 
 
 
@@ -174,11 +186,11 @@
 		width: 48%
 	html
 		font-size: 70%
-	.main
+	.intro
 		margin-bottom: -30px
-	.main-bg-2
+	.intro-bg-2
 		width: 75%
-	.main-bg-3
+	.intro-bg-3
 		top: 45px
 		width: 62%
 	.sa-btn
@@ -196,22 +208,22 @@
 		box-shadow: 0 3px 40px rgba(0,0,0,.3)
 	.menu-btn
 		display: flex
-	.main
+	.intro
 		height: auto
-	.main-content
+	.intro-content
 		padding-top: 30%
-	.main-title
+	.intro-title
 		font-size: 2.5rem
 		max-width: 360px
-	.main-title-wrap .rotate
+	.intro-title-wrap .rotate
 		font-size: 1rem
 		left: -10px
-	.main-title-wrap .small-span
+	.intro-title-wrap .small-span
 		font-size: .9rem
 		left: -12px
-	.main-content-block
+	.intro-content-block
 		z-index: 5
-	.main-descr p:first-child
+	.intro-descr p:first-child
 		font-weight: 500
 		font-size: 1.2rem
 	.get-clients h2
@@ -262,7 +274,7 @@
 		width: 100px
 	.stocks-item--info h3
 		font-size: 1.2rem
-	.promote-item span
+	.steps-item span
 		width: 50px
 		height: 50px
 		line-height: 50px
@@ -297,7 +309,7 @@
 
 
 @media all and (max-width: 580px)
-	.main
+	.intro
 		margin-bottom: 50px
 		min-height: auto
 	section
@@ -324,20 +336,20 @@
 		background-image: none
 		padding-left: 0
 		font-size: 15px
-	.main-content
+	.intro-content
 		padding-top: 60vw
-	.main-bg-2
+	.intro-bg-2
 		width: 100%
 		right: -25vw
-	.main-bg-3
+	.intro-bg-3
 		width: 78%
 		right: auto
-	.main-content-block .sa-btn
+	.intro-content-block .sa-btn
 		padding: 16px 45px
 		display: block
 		text-align: center
 		margin: 30px auto 0
-	.main-title-wrap
+	.intro-title-wrap
 		padding-left: 30px
 	.get-clients
 		padding-top: 0
@@ -444,25 +456,25 @@
 		max-width: 100%
 		&:first-child
 			margin-bottom: 30px
-	.promote
+	.steps
 		margin-top: -30px
-	.promote-item
+	.steps-item
 		min-height: 80px
-	.promote-item:nth-child(2n+2)
+	.steps-item:nth-child(2n+2)
 		flex-direction: row
-	.promote-item:nth-child(2n+2) .promote-item--text
+	.steps-item:nth-child(2n+2) .steps-item--text
 		text-align: left
 		margin-right: 0
-	.promote-item--text
+	.steps-item--text
 		width: 100%
 		margin-left: 0
 		padding-left: 30px
-	.promote-item--img
+	.steps-item--img
 		display: none
-	.promote-item span
+	.steps-item span
 		left: -8px
-	.promote-item:after
-		left: -5px
+	.steps-item:after
+		left: -7px
 	.articles-block
 		margin-top: 30px
 	.articles-item
@@ -492,4 +504,18 @@
 				margin-top: 5px
 		.footer-bottom
 			padding: 10px 0
-
+	.certificates-slide
+		transform: scale(1)
+	.certificates-slide.slick-slide.slick-current.slick-active
+		left: auto
+		max-width: 450px
+		transform: scale(1)
+		box-shadow: 0 55px 65px rgba(0,0,0,.3)
+	.certificates-slider:after, .certificates-slider:before
+		display: none
+	.certificates-slider .slick-prev,
+	.certificates-slider .slick-next
+		top: 105%
+		transform: translate(0,0)
+	.certificates-slider .slick-next
+		transform: rotate(180deg)

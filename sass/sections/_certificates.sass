@@ -1,0 +1,47 @@
+.certificates
+	padding-bottom: 100px
+	&-slider
+		position: relative
+		&:after,
+		&:before
+			content: ''
+			display: block
+			height: 100%
+			width: 14%
+			position: absolute
+			top: 0
+			left: -35px
+			box-shadow: 10px 0 70px 60px rgba(#fff, .9)
+			z-index: 1
+			background-color: #fff
+			filter: blur(5px)
+		&:before
+			left: auto
+			right: -35px
+			box-shadow: -10px 0 70px 60px rgba(#fff, .9)
+		.slick-list
+			overflow: visible
+			overflow-x: hidden
+		.slick-next
+			right: 24%
+			top: 49.3%
+			transform: translateY(-36%) rotate(180deg)
+		.slick-prev
+			left: 24%
+			top: 51%
+	&-slide
+		transform: scale(.5)
+		transition: all .2s ease
+	.slick-track
+		align-items: center
+.certificates-slide.slick-slide.slick-current.slick-active
+	position: relative
+	left: -5vw
+.certificates-slide.slick-slide.slick-current.slick-active + .slick-active + .slick-active
+	position: relative
+	right: -5vw
+
+.certificates-slide.slick-slide.slick-current.slick-active + .slick-active
+    transform: scale(1)
+    margin: 0 auto
+    box-shadow: 0 55px 65px rgba(0,0,0,.3)
