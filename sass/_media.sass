@@ -186,6 +186,9 @@
 		padding-top: 15px
 		padding-bottom: 15px
 		padding-right: 25px
+	.prices__item--img
+		max-width: 350px
+		margin-right: 30px
 
 
 
@@ -322,6 +325,11 @@
 		max-width: 40%
 	.sa-faq .tabs__caption-item p
 		left: 45%
+	.prices__item, .prices__item:nth-child(odd)
+		flex-direction: column
+	.prices__item--img
+		margin-right: 0
+		margin-bottom: 40px
 
 
 
@@ -556,3 +564,7 @@
 		top: auto
 		transform: translate(0)
 		padding: 20px
+	.prices__item--img
+		max-width: 100%
+	.prices__item--text
+		width: 100%
