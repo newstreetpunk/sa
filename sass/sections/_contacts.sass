@@ -68,6 +68,7 @@
 		text-align: center
 		background-size: cover
 		padding: 70px 0
+		margin-bottom: 100px
 		h2
 			text-align: center
 			font-size: 1.25rem
@@ -94,5 +95,33 @@
 					height: auto
 					position: absolute
 					left: -35px
-
+.location
+	display: flex
+	align-items: center
+	.map
+		width: 60%
+	&-form
+		width: 40%
+		background-image: url(../img/callback-bg-loc.png)
+		background-repeat: no-repeat
+		background-size: cover
+		padding: 142px 0
+		position: absolute
+		right: 53px
+		background-position: left -90px center
+		form
+			max-width: 500px
+			width: 100%
+			padding-left: 100px
+			.form-group
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0
+				label
+					font-weight: 500
+			input[type=submit]
+				margin-top: 20px
+			textarea
+				height: 110px
+				border-radius: 30px
 
